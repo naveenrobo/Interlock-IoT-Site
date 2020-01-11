@@ -281,13 +281,18 @@
               <h2 class="heading-4">Get in touch</h2>
             </div>
             <div class="form w-form">
-              <form id="email-form" name="email-form" data-name="Email Form"><input type="text"
-                  class="text-field w-input" maxlength="256" name="name-2" data-name="Name 2"
-                  placeholder="Enter your name" id="name-2"><input type="text" class="text-field w-input"
-                  maxlength="256" name="email-2" data-name="Email 2" placeholder="Enter your email" id="email-2"
-                  required=""><textarea id="field-2" name="field-2" placeholder="Your message" maxlength="5000"
-                  data-name="Field 2" class="text-area w-input"></textarea><input type="submit" value="Send message"
-                  data-wait="Please wait..." class="button2 w-button"></form>
+              <form id="email-form" name="email-form" data-name="Email Form" action="https://api.staticforms.xyz/submit"
+                method="POST">
+                <input type="hidden" name="accessKey" value="c4023e93-9b88-4314-8bc7-8721106cacb3">
+                <input type="text" class="text-field w-input" maxlength="256" name="name" data-name="Name 2"
+                  placeholder="Enter your name" id="name-2">
+                <input type="text" class="text-field w-input" maxlength="256" name="email" data-name="Email 2"
+                  placeholder="Enter your email" id="email-2" required="">
+                <textarea id="field-2" name="message" placeholder="Your message" maxlength="5000" data-name="Field 2"
+                  class="text-area w-input"></textarea>
+                <input type="text" name="honeypot" style="display:none">
+                <input type="submit" value="Send message" data-wait="Please wait..." class="button2 w-button">
+              </form>
               <div class="w-form-done">
                 <div>Thank you! Your submission has been received!</div>
               </div>
@@ -349,6 +354,7 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
   <script src="dist/index.bundle.js" type="text/javascript"></script>
+
 
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
