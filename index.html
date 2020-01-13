@@ -10,6 +10,11 @@
   <meta name="description" content="Premium Onepage Theme">
   <meta name="keywords" content="Some keywords that best describes your site">
   <link rel="shortcut icon" href="./images/favicon.ico">
+  <script>
+    if (location.protocol != 'https:') {
+      location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+    }
+  </script>
   <script src="./bundle/index.bundle.js" type="text/javascript"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
@@ -22,12 +27,6 @@
         ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
     }
       (window, document);
-  </script>
-
-  <script>
-    if (location.protocol != 'https:') {
-      location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
-    }
   </script>
 
 </head>
